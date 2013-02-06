@@ -97,7 +97,12 @@ fi
 #
 
 export PATH=$PATH:$node_home/bin
-scripts/test.sh
+scripts/test.sh \
+  --single-run \
+  --browsers="Chrome,Firefox" \
+  --reporters="dots,junit" \
+  --no-colors
+
 
 #
 # run the Angular.js e2e tests (this requires a server too)
@@ -105,7 +110,12 @@ scripts/test.sh
 
 node scripts/web-server.js &amp;
 NODE_PID=$!
-scripts/e2e-test.sh
+scripts/e2e-test.sh \
+  --single-run \
+  --browsers="Chrome,Firefox" \
+  --reporters="dots,junit" \
+  --no-colors
+
 kill -s TERM $NODE_PID
 
 
