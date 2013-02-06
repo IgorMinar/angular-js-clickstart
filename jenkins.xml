@@ -103,7 +103,7 @@ scripts/test.sh
 # run the Angular.js e2e tests (this requires a server too)
 #
 
-node scripts/web-server.js &amp;
+node scripts/web-server.js &gt; /dev/null &amp;
 NODE_PID=$!
 scripts/e2e-test.sh
 kill -s TERM $NODE_PID
