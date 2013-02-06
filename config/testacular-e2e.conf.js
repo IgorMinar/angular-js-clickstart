@@ -8,7 +8,7 @@ files = [
 
 autoWatch = false;
 
-browsers = ['Chrome', 'Firefox'];
+browsers = ['Chrome'];
 
 singleRun = true;
 
@@ -17,6 +17,6 @@ proxies = {
 };
 
 junitReporter = {
-  outputFile: 'test_out/e2e.xml',
+  outputFile: 'e2e-test-results.xml',
   suite: 'e2e'
 };
