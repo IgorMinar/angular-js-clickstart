@@ -12,15 +12,9 @@ files = [
 
 autoWatch = true;
 
-browsers = ['Chrome', 'Firefox'];
+browsers = ['Chrome'];
 
-singleRun = true;
-
-reporters = ['dots', 'junit'];
 junitReporter = {
-    outputFile: 'test-results.xml',
-    suite: 'unit'
-
+  outputFile: 'test-results.xml',
+  suite: 'unit'
 };
-
-
